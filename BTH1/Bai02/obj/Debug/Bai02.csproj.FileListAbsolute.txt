@@ -1,0 +1,7 @@
+C:\Codes\VisualStudio\BTH1_LyPhuocThuan_24521739\Bai02\bin\Debug\Bai02.exe.config
+C:\Codes\VisualStudio\BTH1_LyPhuocThuan_24521739\Bai02\bin\Debug\Bai02.exe
+C:\Codes\VisualStudio\BTH1_LyPhuocThuan_24521739\Bai02\bin\Debug\Bai02.pdb
+C:\Codes\VisualStudio\BTH1_LyPhuocThuan_24521739\Bai02\obj\Debug\Bai02.csproj.AssemblyReference.cache
+C:\Codes\VisualStudio\BTH1_LyPhuocThuan_24521739\Bai02\obj\Debug\Bai02.csproj.CoreCompileInputs.cache
+C:\Codes\VisualStudio\BTH1_LyPhuocThuan_24521739\Bai02\obj\Debug\Bai02.exe
+C:\Codes\VisualStudio\BTH1_LyPhuocThuan_24521739\Bai02\obj\Debug\Bai02.pdb
