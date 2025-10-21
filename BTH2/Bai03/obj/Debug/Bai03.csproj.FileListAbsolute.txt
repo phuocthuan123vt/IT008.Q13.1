@@ -1,0 +1,7 @@
+D:\Code\BTH2_LyPhuocThuan_24521739\Bai03\obj\Debug\Bai03.csproj.AssemblyReference.cache
+D:\Code\BTH2_LyPhuocThuan_24521739\Bai03\obj\Debug\Bai03.csproj.CoreCompileInputs.cache
+D:\Code\BTH2_LyPhuocThuan_24521739\Bai03\bin\Debug\Bai03.exe.config
+D:\Code\BTH2_LyPhuocThuan_24521739\Bai03\bin\Debug\Bai03.exe
+D:\Code\BTH2_LyPhuocThuan_24521739\Bai03\bin\Debug\Bai03.pdb
+D:\Code\BTH2_LyPhuocThuan_24521739\Bai03\obj\Debug\Bai03.exe
+D:\Code\BTH2_LyPhuocThuan_24521739\Bai03\obj\Debug\Bai03.pdb
