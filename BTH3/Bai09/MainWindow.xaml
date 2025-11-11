@@ -1,0 +1,190 @@
+﻿<Window x:Class="Bai09.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bai09"
+        mc:Ignorable="d"
+        Title="Nhập Liệu Sinh Viên" Height="700" Width="900"
+        ResizeMode="NoResize">
+    <Grid Margin="40, 10, 40, 10"> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="0">
+            Thông Tin Sinh Viên
+        </TextBlock>
+        <Grid Grid.Row="1" Margin="200, 0, 200, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                Margin="5"
+                Grid.Row="0"
+                Grid.Column="0">
+                Mã Sinh Viên
+            </TextBlock>
+            <TextBox
+                x:Name="StudentID_TextBox"
+                Grid.Row="0" 
+                Grid.Column="1"
+                Width="150"
+                HorizontalAlignment="Left"
+                Margin="5">
+            </TextBox>
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="5">
+                Họ Tên
+            </TextBlock>
+            <TextBox
+                x:Name="StudentName_TextBox"
+                Grid.Row="1" 
+                Grid.Column="1"
+                Margin="5">
+            </TextBox>
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="5">
+                Chuyên Ngành
+            </TextBlock>
+            <ComboBox x:Name="StudentMajor_ComboBox" Grid.Row="2" Grid.Column="1" Margin="5">
+                <ComboBoxItem>Công nghệ Thông tin</ComboBoxItem>
+                <ComboBoxItem>Hệ thống Thông tin</ComboBoxItem>
+                <ComboBoxItem>Kỹ thuật Thông tin</ComboBoxItem>
+                <ComboBoxItem>Công nghệ Thông tin</ComboBoxItem>
+                <ComboBoxItem>Khoa học Máy tính</ComboBoxItem>
+                <ComboBoxItem>Kỹ thuật Máy tính</ComboBoxItem>
+                <ComboBoxItem>Kỹ thuật Phần mềm</ComboBoxItem>
+                <ComboBoxItem>MMT và Truyền thông dữ liệu</ComboBoxItem>
+                <ComboBoxItem>An toàn Thông tin</ComboBoxItem>
+                <ComboBoxItem>Thương mại Điện tử</ComboBoxItem>
+                <ComboBoxItem>Khoa học Dữ liệu</ComboBoxItem>
+                <ComboBoxItem>Trí tuệ Nhân tạo</ComboBoxItem>
+                <ComboBoxItem>Thiết kế Vi mạch</ComboBoxItem>
+            </ComboBox>
+       
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="5">
+                Giới Tính
+            </TextBlock>
+            <StackPanel
+                Orientation="Horizontal"
+                Grid.Row="3"
+                Grid.Column="1">
+                <RadioButton
+                    x:Name="Male_RadioButton"
+                    Content="Nam"
+                    GroupName="Gender"
+                    Margin="5">
+                </RadioButton>
+                <RadioButton   
+                    x:Name="Female_RadioButton"
+                    Content="Nữ"
+                    GroupName="Gender"
+                    Margin="5">
+                </RadioButton>
+            </StackPanel>
+        </Grid>
+        <TextBlock Grid.Row="2" Margin="205, 5, 0, 5">
+            Chọn Các Môn Học Tham Gia
+        </TextBlock>
+        <Grid Grid.Row="3" Margin="200, 0, 10, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox
+                x:Name="AvailableSubjects_ListBox"
+                Grid.Column="0"
+                Height="100"
+                BorderBrush="Black"
+                BorderThickness="1"
+                SelectionMode="Extended"
+                Margin="0, 10, 10, 10">
+            </ListBox>
+            <StackPanel 
+                Grid.Column="1"
+                Orientation="Vertical"
+                Margin="5">
+                <Button
+                    x:Name="AddSubjects_Button"
+                    Content="&gt;"
+                    FontWeight="Bold"
+                    Margin="5"
+                    Click="AddSubjects_Button_Click">
+                </Button>
+                <Button
+                    x:Name="RemoveSubjects_Button"
+                    Content="&lt;"
+                    FontWeight="Bold"
+                    Margin="5"
+                    Click="RemoveSubjects_Button_Click">
+                </Button>
+            </StackPanel>
+            <ListBox
+                 x:Name="SelectedSubjects_ListBox"
+                 Grid.Column="2"
+                 Height="100"
+                 BorderBrush="Black"
+                 BorderThickness="1"
+                 SelectionMode="Extended"
+                 Margin="0, 10, 10, 10">
+            </ListBox>
+        </Grid>
+        <StackPanel
+            Orientation="Horizontal"
+            Grid.Row="4"
+            HorizontalAlignment="Center">
+            <Button
+                x:Name="Save_button"
+                Padding="5"
+                Margin="5"
+                Click="Save_button_Click">
+                Lưu Thông Tin
+            </Button>
+            <Button
+                x:Name="RemoveSelections_button"
+                Padding="5"
+                Margin="5"
+                Click="RemoveSelections_button_Click">
+                Xoá Chọn
+            </Button>
+        </StackPanel>
+        <ListView
+            x:Name="StudentInfos_ListView"
+            Grid.Row="5"
+            Margin="0, 10, 0, 10"
+            SelectionChanged="StudentInfos_ListView_SelectionChanged"
+            >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="STT" Width="30" DisplayMemberBinding="{Binding STT}"/>
+                    <GridViewColumn Header="MSSV" Width="120" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Header="Họ Tên" Width="200" DisplayMemberBinding="{Binding FullName}"/>
+                    <GridViewColumn Header="Chuyên Ngành" Width="200" DisplayMemberBinding="{Binding Major}"/>
+                    <GridViewColumn Header="Giới Tính" Width="60" DisplayMemberBinding="{Binding Gender}"/>
+                    <GridViewColumn Header="Số Môn Đã Tham Gia" Width="400" DisplayMemberBinding="{Binding RegisteredSubjectsDisplay}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
